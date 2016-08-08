@@ -75,9 +75,9 @@ end
 
 function checkDown(player)
 
-	x1 = math.ceil((player.y+3+player.height)/16)
+	x1 = math.ceil((player.y+5+player.height)/16)
 	y1 = math.ceil((player.x+1)/16)
-	x2 = math.ceil((player.y+3+player.height)/16)--math.ceil((player.y+3+player.height)/16)
+	x2 = math.ceil((player.y+5+player.height)/16)--math.ceil((player.y+3+player.height)/16)
 	y2 = math.ceil((player.x+player.width-1)/16)
 
 	right = map[x1][y1]

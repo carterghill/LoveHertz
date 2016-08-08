@@ -87,12 +87,12 @@ function update()
 		levelLoaded = true
 	end
 
-	if love.keyboard.isDown(' ') and not gameStart then
+	if love.keyboard.isDown('space') and not gameStart then
 		gameStart = true
 		gameOver = false
 	end 
 	
-	if love.keyboard.isDown(' ') and gameOver then
+	if love.keyboard.isDown('space') and gameOver then
 		gameStart = true
 		gameOver = false
 		loadCurrentLevel()

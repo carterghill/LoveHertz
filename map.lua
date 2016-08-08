@@ -32,13 +32,14 @@ Levels are defined in levelDef.lua
 ]]
 function LoadLevel(level)
 
-	windowWidth, windowHeight = love.window.getDimensions()
+	windowWidth, windowHeight = love.graphics.getDimensions()
 	
 	map = level.tilemap				-- get the tilemap from the level
 	mapheight = table.getn(map)		-- figure out how tall it is....
 	mapwidth = table.getn(map[1])	-- ... and how wide it is.
 	imagePath = level.imagePath		-- also, get the image we made the map with.
 	image = love.graphics.newImage(imagePath)		-- load up that image!
+	image:setFilter('nearest','nearest')
 	
 	--[[ What does the spriteBatch do?
 		From love2d docs, "Using a single image, draw any number of identical copies of the image using 
